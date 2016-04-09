@@ -20,6 +20,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
+      'bower_components', 'node_modules'
     ],
 
     // preprocess matching files before serving them to the browser
@@ -47,10 +48,15 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
+    singleRun: true,
+
+    plugins: [
+      'karma-phantomjs-launcher',
+      'karma-jasmine',
+    ],
   })
 };
