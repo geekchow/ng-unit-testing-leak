@@ -1,12 +1,11 @@
 'use strict';
 
-(function () {
 
   var testDefinition = function () {
 
     var suite = {};
 
-    beforeEach(module('app'));
+    beforeEach(angular.mock.module('app'));
 
     beforeEach(inject(function ($rootScope, $compile, heavyLoad) {
       suite.$rootScope = $rootScope;
@@ -54,8 +53,12 @@
   };
 
   // define multiple suits with the same definition just for showcase
+  /*
   for (var i = 0; i < 3000; i += 1) {
     describe('heavyLoad effective directive #' + i, testDefinition);
   }
+  */
 
-})();
+    for (var i = 0; i < 3000; i += 1) {
+      describe('heavyLoad effective directive #' + i, testDefinition);
+    }
