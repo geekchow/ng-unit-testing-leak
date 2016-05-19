@@ -44,7 +44,7 @@
 
   // define multiple suits with the same definition just for showcase
   /* TODO: uncomment this if you want to see the memory leaks
-  for (var i = 0; i < 1000; i += 1) {
+  for (var i = 0; i < 2000; i += 1) {
     describe('heavyLoad directive #' + i, testDefinition);
   }
   */
